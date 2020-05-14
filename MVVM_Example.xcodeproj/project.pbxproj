@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D341E6DD6FB1EDCA3257716 /* Pods_MVVM_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41F672AE272BB96361C58B8 /* Pods_MVVM_Example.framework */; };
+		34663D4E246CF29C0053DDBB /* CarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34663D4D246CF29C0053DDBB /* CarVC.swift */; };
 		349D2EE1246C9F94000397D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D2EE0246C9F94000397D7 /* AppDelegate.swift */; };
 		349D2EE3246C9F94000397D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D2EE2246C9F94000397D7 /* SceneDelegate.swift */; };
-		349D2EE5246C9F94000397D7 /* CarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D2EE4246C9F94000397D7 /* CarVC.swift */; };
 		349D2EEB246C9F94000397D7 /* MVVM_Example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 349D2EE9246C9F94000397D7 /* MVVM_Example.xcdatamodeld */; };
 		349D2EED246C9FAA000397D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349D2EEC246C9FAA000397D7 /* Assets.xcassets */; };
 		349D2EF0246C9FAA000397D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D2EEE246C9FAA000397D7 /* LaunchScreen.storyboard */; };
@@ -24,10 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34663D4D246CF29C0053DDBB /* CarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarVC.swift; sourceTree = "<group>"; };
 		349D2EDD246C9F94000397D7 /* MVVM_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		349D2EE0246C9F94000397D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349D2EE2246C9F94000397D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		349D2EE4246C9F94000397D7 /* CarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarVC.swift; path = MVVM_Example/CarVC.swift; sourceTree = SOURCE_ROOT; };
 		349D2EEA246C9F94000397D7 /* MVVM_Example.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MVVM_Example.xcdatamodel; sourceTree = "<group>"; };
 		349D2EEC246C9FAA000397D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		349D2EEF246C9FAA000397D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		34D52B6E246CAE9C00C4C709 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				349D2EE4246C9F94000397D7 /* CarVC.swift */,
+				34663D4D246CF29C0053DDBB /* CarVC.swift */,
 				34A14F6B246CB48C007AAD2B /* CarVC+CollectionView.swift */,
 			);
 			path = Controllers;
@@ -293,12 +293,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D52B74246CB1A800C4C709 /* CarCell.swift in Sources */,
-				349D2EE5246C9F94000397D7 /* CarVC.swift in Sources */,
 				34A14F6C246CB48C007AAD2B /* CarVC+CollectionView.swift in Sources */,
 				349D2EE1246C9F94000397D7 /* AppDelegate.swift in Sources */,
 				34D52B70246CAECA00C4C709 /* Car.swift in Sources */,
 				349D2EEB246C9F94000397D7 /* MVVM_Example.xcdatamodeld in Sources */,
 				34A14F6E246CB57D007AAD2B /* APIService.swift in Sources */,
+				34663D4E246CF29C0053DDBB /* CarVC.swift in Sources */,
 				34A14F73246CBB62007AAD2B /* CarViewModel.swift in Sources */,
 				349D2EE3246C9F94000397D7 /* SceneDelegate.swift in Sources */,
 			);

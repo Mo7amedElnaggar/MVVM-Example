@@ -30,7 +30,7 @@
                         <rect key="frame" x="10" y="10" width="202" height="278"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestCar" translatesAutoresizingMaskIntoConstraints="NO" id="Bs0-dn-YbO">
-                                <rect key="frame" x="0.0" y="0.0" width="202" height="167.00000000000011"/>
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="167"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-pP-lsq">
                                 <rect key="frame" x="10" y="182" width="64.5" height="26"/>
