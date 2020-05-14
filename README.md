@@ -10,4 +10,6 @@ https://mvvmtest-b8d32.firebaseio.com/Cars/.json
 
 Screenshot
 
-![](/Screenshot/IMG_4448.PNG)
+<p align="center">
+  <img width="40%" src="/Screenshots/IMG_4448.PNG">
+</p>
