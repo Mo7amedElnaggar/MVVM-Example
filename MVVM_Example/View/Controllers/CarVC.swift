@@ -12,33 +12,30 @@ class CarVC: UIViewController {
 
     @IBOutlet weak var carCollectionView: UICollectionView!
     
-    var cars: [CarViewModel] = []
+    var cars: [Car] = []
+    var viewModel = CarsViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        APIService.instance.FetchFireDatabase(url: "https://mvvmtest-b8d32.firebaseio.com/Cars/.json") { (cars: [Car]?, err: Error?) in
-            
-            guard err == nil else {
-                print(err!.localizedDescription)
-                return
-            }
-            
-            self.cars = CarViewModel.collectionOfCars(cars: cars!)
-            self.carCollectionView.reloadData()
-        }
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerCell()
+        fetchCars()
     }
     
+    func fetchCars() {
+        viewModel.fetchCars { [weak self] (cars) in
+            self?.cars = cars
+            self?.carCollectionView.reloadData()
+        }
+    }
     
     func registerCell() {
         self.carCollectionView.register(UINib(nibName: "CarCell", bundle: nil), forCellWithReuseIdentifier: "CarCell")
     }
-    
 }
 

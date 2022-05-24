@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+enum CarType: Int, Codable {
+    case forSale = 1
+    case forExchange = 2
+    case none
+}
 
 struct Car: Codable {
 
@@ -15,9 +22,9 @@ struct Car: Codable {
     let carYear: Int?
     let carPrice: Double?
     let carBrand: String?
-    let carType: Int?  // 1 stands for sale cars // 2 stands for exchange cars
+    let carType: CarType?  // 1 stands for sale cars // 2 stands for exchange cars
     
-    enum CarKeys: String , CodingKey {
+    enum CodingKeys: String , CodingKey {
         case carImageUrl = "car_url"
         case carName = "car_name"
         case carYear = "car_year"
@@ -25,20 +32,29 @@ struct Car: Codable {
         case carBrand = "car_brand"
         case carType = "car_type"
     }
-    
-//    public enum CarType {
-//        case forSale
-//        case forExchange
-//    }
-    
-    init(from decoder: Decoder)  throws {
-        let carData = try decoder.container(keyedBy: CarKeys.self)
-        carImageUrl = try carData.decodeIfPresent(String.self, forKey: .carImageUrl)
-        carName = try carData.decodeIfPresent(String.self, forKey: .carName)
-        carYear = try carData.decodeIfPresent(Int.self, forKey: .carYear)
-        carPrice = try carData.decodeIfPresent(Double.self, forKey: .carPrice)
-        carBrand = try carData.decodeIfPresent(String.self, forKey: .carBrand)
-        carType = try carData.decodeIfPresent(Int.self, forKey: .carType)!
+}
+
+extension Car {
+    var carTitle: String {
+        return "\(self.carBrand ?? "") \(self.carName ?? "") \(self.carYear ?? 0)"
     }
     
+    var carPriceWithCurrency: String {
+        return "\(self.carPrice ?? 0) EGP"
+    }
+    
+    public var priceBGColor: UIColor {
+        switch self.carType {
+        case .forSale:
+            return #colorLiteral(red: 0, green: 0.6662465334, blue: 0.5891815424, alpha: 1)
+        case .forExchange:
+            return #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        default:
+            return #colorLiteral(red: 0, green: 0.6662465334, blue: 0.5891815424, alpha: 1)
+        }
+    }
+    
+    public var carImage: UIImage? {
+        return #imageLiteral(resourceName: "TestCar")
+    }
 }

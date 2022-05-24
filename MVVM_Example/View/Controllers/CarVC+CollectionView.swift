@@ -18,12 +18,12 @@ extension CarVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let carCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarCell", for: indexPath) as? CarCell else { return UICollectionViewCell() }
         
-        let carViewModel = self.cars[indexPath.row]
+        let car = self.cars[indexPath.row]
         
-        carCell.setCarImage(for: carViewModel.carImage)
-        carCell.setCarTitle(for: carViewModel.carTitle)
-        carCell.setCarPrice(for: carViewModel.carPrice)
-        carCell.setPriceBackground(for: carViewModel.priceBGColor)
+        carCell.setCarImage(for: car.carImage)
+        carCell.setCarTitle(for: car.carTitle)
+        carCell.setCarPrice(for: car.carPriceWithCurrency)
+        carCell.setPriceBackground(for: car.priceBGColor)
         
         return carCell
     }

@@ -12,6 +12,8 @@ import Alamofire
 class APIService {
     static let instance = APIService()
     
+    private init() {}
+    
     func FetchFireDatabase<T: Decodable>(url: String , completion: @escaping (T? , Error?) -> Void) {
         AF.request(url).responseJSON(completionHandler: { (response) in
             guard let data = response.data else { return }
